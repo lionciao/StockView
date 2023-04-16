@@ -19,6 +19,13 @@
 		04A25A1429EC1FDB00E00B4D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1329EC1FDB00E00B4D /* Alamofire */; };
 		04A25A1729EC29B500E00B4D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1629EC29B500E00B4D /* Moya */; };
 		04A25A1A29EC29E800E00B4D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1929EC29E800E00B4D /* SnapKit */; };
+		04A25A1D29EC2A6C00E00B4D /* NetworkRequest+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A1C29EC2A6C00E00B4D /* NetworkRequest+Moya.swift */; };
+		04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A1E29EC2A8C00E00B4D /* NetworkCancellable.swift */; };
+		04A25A2129EC2AA900E00B4D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2029EC2AA900E00B4D /* NetworkService.swift */; };
+		04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2229EC2AC900E00B4D /* DefaultNetworkService.swift */; };
+		04A25A2529EC2ADA00E00B4D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2429EC2ADA00E00B4D /* ServiceError.swift */; };
+		04A25A2829EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2729EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift */; };
+		04A25A2A29EC2B5C00E00B4D /* NetworkService+share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2929EC2B5C00E00B4D /* NetworkService+share.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,13 @@
 		04A259FF29EC1F5100E00B4D /* StockViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A25A0329EC1F5100E00B4D /* StockViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewUITests.swift; sourceTree = "<group>"; };
 		04A25A0529EC1F5100E00B4D /* StockViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04A25A1C29EC2A6C00E00B4D /* NetworkRequest+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+Moya.swift"; sourceTree = "<group>"; };
+		04A25A1E29EC2A8C00E00B4D /* NetworkCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCancellable.swift; sourceTree = "<group>"; };
+		04A25A2029EC2AA900E00B4D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		04A25A2229EC2AC900E00B4D /* DefaultNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkService.swift; sourceTree = "<group>"; };
+		04A25A2429EC2ADA00E00B4D /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		04A25A2729EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+DefaultImplement.swift"; sourceTree = "<group>"; };
+		04A25A2929EC2B5C00E00B4D /* NetworkService+share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+share.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +119,7 @@
 		04A259E129EC1F4F00E00B4D /* StockView */ = {
 			isa = PBXGroup;
 			children = (
+				04A25A1B29EC2A5600E00B4D /* Network */,
 				04A259E229EC1F4F00E00B4D /* AppDelegate.swift */,
 				04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */,
 				04A259E629EC1F4F00E00B4D /* ViewController.swift */,
@@ -131,6 +146,28 @@
 				04A25A0529EC1F5100E00B4D /* StockViewUITestsLaunchTests.swift */,
 			);
 			path = StockViewUITests;
+			sourceTree = "<group>";
+		};
+		04A25A1B29EC2A5600E00B4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04A25A2629EC2B2200E00B4D /* Domain */,
+				04A25A2729EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift */,
+				04A25A2929EC2B5C00E00B4D /* NetworkService+share.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		04A25A2629EC2B2200E00B4D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				04A25A1C29EC2A6C00E00B4D /* NetworkRequest+Moya.swift */,
+				04A25A1E29EC2A8C00E00B4D /* NetworkCancellable.swift */,
+				04A25A2029EC2AA900E00B4D /* NetworkService.swift */,
+				04A25A2229EC2AC900E00B4D /* DefaultNetworkService.swift */,
+				04A25A2429EC2ADA00E00B4D /* ServiceError.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A25A2A29EC2B5C00E00B4D /* NetworkService+share.swift in Sources */,
+				04A25A2529EC2ADA00E00B4D /* ServiceError.swift in Sources */,
+				04A25A1D29EC2A6C00E00B4D /* NetworkRequest+Moya.swift in Sources */,
 				04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */,
+				04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */,
+				04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */,
 				04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */,
+				04A25A2829EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift in Sources */,
+				04A25A2129EC2AA900E00B4D /* NetworkService.swift in Sources */,
 				04A259E529EC1F4F00E00B4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
