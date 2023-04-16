@@ -17,6 +17,7 @@
 		04A25A0429EC1F5100E00B4D /* StockViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A0329EC1F5100E00B4D /* StockViewUITests.swift */; };
 		04A25A0629EC1F5100E00B4D /* StockViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A0529EC1F5100E00B4D /* StockViewUITestsLaunchTests.swift */; };
 		04A25A1429EC1FDB00E00B4D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1329EC1FDB00E00B4D /* Alamofire */; };
+		04A25A1729EC29B500E00B4D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1629EC29B500E00B4D /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A25A1729EC29B500E00B4D /* Moya in Frameworks */,
 				04A25A1429EC1FDB00E00B4D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +149,7 @@
 			name = StockView;
 			packageProductDependencies = (
 				04A25A1329EC1FDB00E00B4D /* Alamofire */,
+				04A25A1629EC29B500E00B4D /* Moya */,
 			);
 			productName = StockView;
 			productReference = 04A259DF29EC1F4F00E00B4D /* StockView.app */;
@@ -222,6 +225,7 @@
 			mainGroup = 04A259D629EC1F4F00E00B4D;
 			packageReferences = (
 				04A25A1229EC1FDB00E00B4D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				04A25A1529EC29B500E00B4D /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 04A259E029EC1F4F00E00B4D /* Products */;
 			projectDirPath = "";
@@ -620,6 +624,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		04A25A1529EC29B500E00B4D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = exactVersion;
+				version = 14.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -627,6 +639,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04A25A1229EC1FDB00E00B4D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		04A25A1629EC29B500E00B4D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04A25A1529EC29B500E00B4D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
