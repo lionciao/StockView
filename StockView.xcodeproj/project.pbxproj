@@ -18,6 +18,7 @@
 		04A25A0629EC1F5100E00B4D /* StockViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A0529EC1F5100E00B4D /* StockViewUITestsLaunchTests.swift */; };
 		04A25A1429EC1FDB00E00B4D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1329EC1FDB00E00B4D /* Alamofire */; };
 		04A25A1729EC29B500E00B4D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1629EC29B500E00B4D /* Moya */; };
+		04A25A1A29EC29E800E00B4D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04A25A1929EC29E800E00B4D /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A25A1A29EC29E800E00B4D /* SnapKit in Frameworks */,
 				04A25A1729EC29B500E00B4D /* Moya in Frameworks */,
 				04A25A1429EC1FDB00E00B4D /* Alamofire in Frameworks */,
 			);
@@ -150,6 +152,7 @@
 			packageProductDependencies = (
 				04A25A1329EC1FDB00E00B4D /* Alamofire */,
 				04A25A1629EC29B500E00B4D /* Moya */,
+				04A25A1929EC29E800E00B4D /* SnapKit */,
 			);
 			productName = StockView;
 			productReference = 04A259DF29EC1F4F00E00B4D /* StockView.app */;
@@ -226,6 +229,7 @@
 			packageReferences = (
 				04A25A1229EC1FDB00E00B4D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				04A25A1529EC29B500E00B4D /* XCRemoteSwiftPackageReference "Moya" */,
+				04A25A1829EC29E800E00B4D /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 04A259E029EC1F4F00E00B4D /* Products */;
 			projectDirPath = "";
@@ -632,6 +636,14 @@
 				version = 14.0.0;
 			};
 		};
+		04A25A1829EC29E800E00B4D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -644,6 +656,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04A25A1529EC29B500E00B4D /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		04A25A1929EC29E800E00B4D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04A25A1829EC29E800E00B4D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
