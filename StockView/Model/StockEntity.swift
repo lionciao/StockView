@@ -10,7 +10,7 @@ import Foundation
 struct StockEntity: Decodable {
     
     /// 產業別
-    let industryID: String
+    let industryID: IndustryID
     
     /// 公司代號
     let symbol: String

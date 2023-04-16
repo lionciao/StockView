@@ -28,6 +28,7 @@
 		04A25A2A29EC2B5C00E00B4D /* NetworkService+share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2929EC2B5C00E00B4D /* NetworkService+share.swift */; };
 		04A25A2D29EC2C3800E00B4D /* StockEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2C29EC2C3800E00B4D /* StockEntity.swift */; };
 		04A25A2F29EC425300E00B4D /* StockListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A2E29EC425300E00B4D /* StockListRequest.swift */; };
+		04A25A3329EC457C00E00B4D /* IndustryID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A3229EC457C00E00B4D /* IndustryID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		04A25A2929EC2B5C00E00B4D /* NetworkService+share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+share.swift"; sourceTree = "<group>"; };
 		04A25A2C29EC2C3800E00B4D /* StockEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockEntity.swift; sourceTree = "<group>"; };
 		04A25A2E29EC425300E00B4D /* StockListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListRequest.swift; sourceTree = "<group>"; };
+		04A25A3229EC457C00E00B4D /* IndustryID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				04A25A2C29EC2C3800E00B4D /* StockEntity.swift */,
 				04A25A2E29EC425300E00B4D /* StockListRequest.swift */,
+				04A25A3229EC457C00E00B4D /* IndustryID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				04A25A1D29EC2A6C00E00B4D /* NetworkRequest+Moya.swift in Sources */,
 				04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */,
 				04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */,
+				04A25A3329EC457C00E00B4D /* IndustryID.swift in Sources */,
 				04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */,
 				04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */,
 				04A25A2829EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift in Sources */,
