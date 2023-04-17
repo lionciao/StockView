@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		045C317429ECF41600A4DE87 /* IndustryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C317329ECF41600A4DE87 /* IndustryListViewModel.swift */; };
 		045C317629ECF6A600A4DE87 /* IndustryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C317529ECF6A600A4DE87 /* IndustryListViewController.swift */; };
+		045C317929ECFB7600A4DE87 /* IndustryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C317829ECFB7600A4DE87 /* IndustryTableCell.swift */; };
+		045C317E29ED011F00A4DE87 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C317D29ED011F00A4DE87 /* NSObject+className.swift */; };
 		04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E229EC1F4F00E00B4D /* AppDelegate.swift */; };
 		04A259E529EC1F4F00E00B4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */; };
 		04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E629EC1F4F00E00B4D /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		045C317329ECF41600A4DE87 /* IndustryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryListViewModel.swift; sourceTree = "<group>"; };
 		045C317529ECF6A600A4DE87 /* IndustryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryListViewController.swift; sourceTree = "<group>"; };
+		045C317829ECFB7600A4DE87 /* IndustryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryTableCell.swift; sourceTree = "<group>"; };
+		045C317D29ED011F00A4DE87 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
 		04A259DF29EC1F4F00E00B4D /* StockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A259E229EC1F4F00E00B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045C317729ECFB5600A4DE87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045C317829ECFB7600A4DE87 /* IndustryTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		045C317C29ED011000A4DE87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045C317D29ED011F00A4DE87 /* NSObject+className.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		04A259D629EC1F4F00E00B4D = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +161,7 @@
 		04A259E129EC1F4F00E00B4D /* StockView */ = {
 			isa = PBXGroup;
 			children = (
+				045C317C29ED011000A4DE87 /* Extensions */,
 				04A25A4A29ECF3A700E00B4D /* IndustryList */,
 				04A25A4529ECEE1A00E00B4D /* TabBar */,
 				04A25A4229ECE8A800E00B4D /* DataSource */,
@@ -237,6 +258,7 @@
 		04A25A4A29ECF3A700E00B4D /* IndustryList */ = {
 			isa = PBXGroup;
 			children = (
+				045C317729ECFB5600A4DE87 /* View */,
 				045C317329ECF41600A4DE87 /* IndustryListViewModel.swift */,
 				045C317529ECF6A600A4DE87 /* IndustryListViewController.swift */,
 			);
@@ -396,9 +418,11 @@
 				04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */,
 				04A25A3329EC457C00E00B4D /* IndustryID.swift in Sources */,
 				045C317629ECF6A600A4DE87 /* IndustryListViewController.swift in Sources */,
+				045C317E29ED011F00A4DE87 /* NSObject+className.swift in Sources */,
 				04A25A3A29ECDC6300E00B4D /* ExtensionWrapper.swift in Sources */,
 				04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */,
 				04A25A4929ECEE9D00E00B4D /* TabBarController.swift in Sources */,
+				045C317929ECFB7600A4DE87 /* IndustryTableCell.swift in Sources */,
 				04A25A4729ECEE2E00E00B4D /* TabBarViewModel.swift in Sources */,
 				04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */,
 				04A25A2829EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift in Sources */,

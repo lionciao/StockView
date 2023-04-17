@@ -83,7 +83,7 @@ extension IndustryID {
         case .general: return "綜合"
         case .other: return "其他"
         case .manageStocks: return "管理股票（由櫃買中心管理）"
-        case .undefined: return ""
+        case .undefined: return "未定義"
         }
     }
 }
