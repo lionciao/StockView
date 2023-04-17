@@ -62,6 +62,15 @@ extension CompanyListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension CompanyListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let stock = viewModel.stock(at: indexPath.row) else { return }
+        let vm = StockDetailViewModel(
+            stock: stock
+        )
+        let vc = StockDetailViewController(viewModel: vm)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: - View makers

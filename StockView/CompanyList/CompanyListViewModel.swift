@@ -29,6 +29,11 @@ final class CompanyListViewModel {
             )
         } ?? []
     }
+    
+    func stock(at index: Int) -> StockModel? {
+        let symbol = companyList[index].symbol
+        return listRepository.symbolToStockMap[symbol]
+    }
 }
 
 struct CompanyModel {
