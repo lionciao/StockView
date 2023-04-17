@@ -19,12 +19,16 @@ final class IndustryListViewModel {
     private(set) var industyList: [IndustryModel] = []
     var shouldShowEmptyView: Bool { return industyList.isEmpty }
     
-    private let listRepository: StockListRepository
+    let listRepository: StockListRepository
     
     init(
         listRepository: StockListRepository
     ) {
         self.listRepository = listRepository
+    }
+    
+    func industryID(at index: Int) -> IndustryID {
+        return industyList[index].id
     }
 }
 
@@ -36,7 +40,7 @@ extension IndustryListViewModel: TabBarViewModelDelegate {
     ) {
         self.industyList = listRepository.industryIDToStocksMap.map {
             IndustryModel(
-                name: $0.name,
+                id: $0,
                 numberOfCompanies: $1.count
             )
         }
@@ -46,6 +50,6 @@ extension IndustryListViewModel: TabBarViewModelDelegate {
 
 struct IndustryModel {
     
-    let name: String
+    let id: IndustryID
     let numberOfCompanies: Int
 }

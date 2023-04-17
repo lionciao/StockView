@@ -29,8 +29,8 @@ final class IndustryTableCell: UITableViewCell {
 
 extension IndustryTableCell {
 
-    func config(with model: IndustryModel) {
-        titleLabel.text = "\(model.name)(\(model.numberOfCompanies))"
+    func config(with text: String) {
+        titleLabel.text = text
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  IndustryListViewController.swift
+//  CompanyListViewController.swift
 //  StockView
 //
 //  Created by Ciao on 2023/4/17.
@@ -8,18 +8,17 @@
 import SnapKit
 import UIKit
 
-final class IndustryListViewController: UIViewController {
+final class CompanyListViewController: UIViewController {
     
     private lazy var titleLabel = makeTitleLabel()
     private lazy var seperatorView = makeSeperatorView()
     private lazy var tableView = makeTableView()
 
-    private let viewModel: IndustryListViewModel
+    private let viewModel: CompanyListViewModel
     
-    init(viewModel: IndustryListViewModel) {
+    init(viewModel: CompanyListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        viewModel.delegate = self
     }
     
     @available(*, unavailable)
@@ -33,21 +32,12 @@ final class IndustryListViewController: UIViewController {
     }
 }
 
-// MARK: - IndustryListViewModelDelegate
-
-extension IndustryListViewController: IndustryListViewModelDelegate {
-    
-    func didFetchIndustryList() {
-        tableView.reloadData()
-    }
-}
-
 // MARK: - UITableViewDataSource
  
-extension IndustryListViewController: UITableViewDataSource {
+extension CompanyListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.industyList.count
+        viewModel.companyList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,8 +48,8 @@ extension IndustryListViewController: UITableViewDataSource {
         else {
             return cell
         }
-        let model = viewModel.industyList[indexPath.row]
-        let text = "\(model.id.name)(\(model.numberOfCompanies))"
+        let model = viewModel.companyList[indexPath.row]
+        let text = "\(model.symbol) \(model.nickname)"
         collectionCell.config(with: text)
         return collectionCell
     }
@@ -71,27 +61,19 @@ extension IndustryListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension IndustryListViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vm = CompanyListViewModel(
-            listRepository: viewModel.listRepository,
-            industryID: viewModel.industryID(at: indexPath.row)
-        )
-        let vc = CompanyListViewController(viewModel: vm)
-        navigationController?.pushViewController(vc, animated: true)
-    }
+extension CompanyListViewController: UITableViewDelegate {
 }
 
 // MARK: - View makers
 
-private extension IndustryListViewController {
+private extension CompanyListViewController {
     
     func setupUI() {
         view.backgroundColor = .white
         tableView.backgroundColor = .white
-        navigationController?.navigationBar.isHidden = true
-         
+        titleLabel.text = viewModel.title
+        navigationController?.navigationBar.isHidden = false
+
         [titleLabel, seperatorView, tableView].forEach {
             view.addSubview($0)
         }
@@ -118,7 +100,6 @@ private extension IndustryListViewController {
         label.font = .systemFont(ofSize: 30, weight: .medium)
         label.textColor = .black
         label.numberOfLines = 1
-        label.text = "產業別"
         return label
     }
     
