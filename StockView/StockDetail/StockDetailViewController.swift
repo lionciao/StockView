@@ -59,6 +59,11 @@ final class StockDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         config(with: viewModel.stock)
+        addObservers()
+    }
+    
+    deinit {
+        removeObservers()
     }
 }
 
@@ -103,6 +108,23 @@ private extension StockDetailViewController {
         alert.addAction(mainAction)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Helpers
+
+private extension StockDetailViewController {
+    
+    @objc func reloadFavoritesStatus() {
+        favoritesButton.isSelected = viewModel.isFavorites()
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadFavoritesStatus), name: .favoritesStatusDidChange, object: nil)
+    }
+    
+    func removeObservers() {
+        NotificationCenter.default.removeObserver(self, name: .favoritesStatusDidChange, object: nil)
     }
 }
 

@@ -30,6 +30,11 @@ final class FavoritesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        addObservers()
+    }
+    
+    deinit {
+        removeObservers()
     }
 }
 
@@ -38,7 +43,7 @@ final class FavoritesListViewController: UIViewController {
 extension FavoritesListViewController: FavoritesListViewModelDelegate {
     
     func didFetchCompanyList() {
-        tableView.reloadData()
+        reloadView()
     }
 }
 
@@ -81,6 +86,23 @@ extension FavoritesListViewController: UITableViewDelegate {
         )
         let vc = StockDetailViewController(viewModel: vm)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - Helpers
+
+private extension FavoritesListViewController {
+    
+    @objc func reloadView() {
+        tableView.reloadData()
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadView), name: .favoritesStatusDidChange, object: nil)
+    }
+    
+    func removeObservers() {
+        NotificationCenter.default.removeObserver(self, name: .favoritesStatusDidChange, object: nil)
     }
 }
 

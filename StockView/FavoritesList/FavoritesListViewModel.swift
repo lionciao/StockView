@@ -14,7 +14,7 @@ final class FavoritesListViewModel {
     
     weak var delegate: FavoritesListViewModelDelegate?
     
-    private(set) var companyList: [CompanyModel] = []
+    var companyList: [CompanyModel] { favoritesRepository.favoritesStocks }
     var shouldShowEmptyView: Bool { return companyList.isEmpty }
     let title: String = "追蹤"
     
@@ -43,7 +43,6 @@ extension FavoritesListViewModel: TabBarViewModelFavoritesDelegate {
         _ viewModel: TabBarViewModel,
         didFetchFavoritesList stocks: [CompanyModel]
     ) {
-        companyList = stocks
         delegate?.didFetchCompanyList()
     }
 }

@@ -23,8 +23,8 @@ extension LocalFavoritesRepository: FavoritesRepository {
     
     func isFavorites(stock: StockModel) -> Bool {
         var isFavorites = false
-        favoritesStocks.forEach { stock in
-            if stock.symbol == stock.symbol {
+        favoritesStocks.forEach { favorite in
+            if favorite.symbol == stock.symbol {
                 isFavorites = true
             }
         }
@@ -39,6 +39,7 @@ extension LocalFavoritesRepository: FavoritesRepository {
                 nickname: stock.nickname
             )
         )
+        NotificationCenter.default.post(name: .favoritesStatusDidChange, object: nil)
     }
     
     func removeFromFavorites(stock: StockModel) throws {
@@ -46,6 +47,7 @@ extension LocalFavoritesRepository: FavoritesRepository {
         if let index = favoritesStocks.firstIndex(where: { $0.symbol == stock.symbol }) {
             favoritesStocks.remove(at: index)
         }
+        NotificationCenter.default.post(name: .favoritesStatusDidChange, object: nil)
     }
     
     func doFavoritesAction(stock: StockModel) throws {
@@ -74,4 +76,9 @@ extension LocalFavoritesRepository {
             completion(.failure(error))
         }
     }
+}
+
+extension Notification.Name {
+    
+    static let favoritesStatusDidChange = Notification.Name("favoritesStatusDidChange")
 }
