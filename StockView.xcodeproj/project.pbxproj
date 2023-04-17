@@ -24,6 +24,8 @@
 		045C319A29ED782100A4DE87 /* PokemonManagedObject+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C319929ED782100A4DE87 /* PokemonManagedObject+Decodable.swift */; };
 		045C319D29ED79E800A4DE87 /* StockModel+ManagedObjectEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C319C29ED79E800A4DE87 /* StockModel+ManagedObjectEncodable.swift */; };
 		045C319F29ED7A4400A4DE87 /* LocalService+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C319E29ED7A4400A4DE87 /* LocalService+Stock.swift */; };
+		045C31A129ED7CB000A4DE87 /* FavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C31A029ED7CB000A4DE87 /* FavoritesRepository.swift */; };
+		045C31A329ED7D1400A4DE87 /* LocalFavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C31A229ED7D1400A4DE87 /* LocalFavoritesRepository.swift */; };
 		04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E229EC1F4F00E00B4D /* AppDelegate.swift */; };
 		04A259E529EC1F4F00E00B4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */; };
 		04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E629EC1F4F00E00B4D /* ViewController.swift */; };
@@ -89,6 +91,8 @@
 		045C319929ED782100A4DE87 /* PokemonManagedObject+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonManagedObject+Decodable.swift"; sourceTree = "<group>"; };
 		045C319C29ED79E800A4DE87 /* StockModel+ManagedObjectEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockModel+ManagedObjectEncodable.swift"; sourceTree = "<group>"; };
 		045C319E29ED7A4400A4DE87 /* LocalService+Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalService+Stock.swift"; sourceTree = "<group>"; };
+		045C31A029ED7CB000A4DE87 /* FavoritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRepository.swift; sourceTree = "<group>"; };
+		045C31A229ED7D1400A4DE87 /* LocalFavoritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFavoritesRepository.swift; sourceTree = "<group>"; };
 		04A259DF29EC1F4F00E00B4D /* StockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A259E229EC1F4F00E00B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 			children = (
 				04A25A4029ECE7BD00E00B4D /* StockListRepository.swift */,
 				04A25A4329ECE8BE00E00B4D /* DefaultStockListRepository.swift */,
+				045C31A029ED7CB000A4DE87 /* FavoritesRepository.swift */,
+				045C31A229ED7D1400A4DE87 /* LocalFavoritesRepository.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -494,11 +500,13 @@
 				045C319829ED77F000A4DE87 /* ManagedObjectEncodable.swift in Sources */,
 				04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */,
 				04A25A3329EC457C00E00B4D /* IndustryID.swift in Sources */,
+				045C31A329ED7D1400A4DE87 /* LocalFavoritesRepository.swift in Sources */,
 				045C317629ECF6A600A4DE87 /* IndustryListViewController.swift in Sources */,
 				045C317E29ED011F00A4DE87 /* NSObject+className.swift in Sources */,
 				045C318829ED0BD400A4DE87 /* StockDetailViewController.swift in Sources */,
 				045C318B29ED75F700A4DE87 /* PersistenceQueue.swift in Sources */,
 				04A25A3A29ECDC6300E00B4D /* ExtensionWrapper.swift in Sources */,
+				045C31A129ED7CB000A4DE87 /* FavoritesRepository.swift in Sources */,
 				04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */,
 				045C319629ED77D000A4DE87 /* LocalService.swift in Sources */,
 				04A25A4929ECEE9D00E00B4D /* TabBarController.swift in Sources */,
