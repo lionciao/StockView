@@ -7,7 +7,17 @@
 
 import Foundation
 
+protocol TabBarViewModelDelegate: AnyObject {
+
+    func tabBarViewModel(
+        _ viewModel: TabBarViewModel,
+        didFetchStockList stocks: [StockModel]
+    )
+}
+
 final class TabBarViewModel {
+    
+    weak var delegate: TabBarViewModelDelegate?
 
     let repository: StockListRepository
     
@@ -16,8 +26,12 @@ final class TabBarViewModel {
     }
     
     func fetchStockList() {
-        repository.getStockList { result in
-            if case let .failure(error) = result {
+        repository.getStockList { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let stocks):
+                self.delegate?.tabBarViewModel(self, didFetchStockList: stocks)
+            case .failure(let error):
                 // TODO: Error handling
                 print("error: \(error)")
             }

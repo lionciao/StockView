@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045C317429ECF41600A4DE87 /* IndustryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C317329ECF41600A4DE87 /* IndustryListViewModel.swift */; };
+		045C317629ECF6A600A4DE87 /* IndustryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C317529ECF6A600A4DE87 /* IndustryListViewController.swift */; };
 		04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E229EC1F4F00E00B4D /* AppDelegate.swift */; };
 		04A259E529EC1F4F00E00B4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */; };
 		04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E629EC1F4F00E00B4D /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045C317329ECF41600A4DE87 /* IndustryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryListViewModel.swift; sourceTree = "<group>"; };
+		045C317529ECF6A600A4DE87 /* IndustryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustryListViewController.swift; sourceTree = "<group>"; };
 		04A259DF29EC1F4F00E00B4D /* StockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A259E229EC1F4F00E00B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		04A259E129EC1F4F00E00B4D /* StockView */ = {
 			isa = PBXGroup;
 			children = (
+				04A25A4A29ECF3A700E00B4D /* IndustryList */,
 				04A25A4529ECEE1A00E00B4D /* TabBar */,
 				04A25A4229ECE8A800E00B4D /* DataSource */,
 				04A25A2B29EC2C1900E00B4D /* Model */,
@@ -227,6 +232,15 @@
 				04A25A4829ECEE9D00E00B4D /* TabBarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		04A25A4A29ECF3A700E00B4D /* IndustryList */ = {
+			isa = PBXGroup;
+			children = (
+				045C317329ECF41600A4DE87 /* IndustryListViewModel.swift */,
+				045C317529ECF6A600A4DE87 /* IndustryListViewController.swift */,
+			);
+			path = IndustryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,10 +390,12 @@
 				04A25A4429ECE8BE00E00B4D /* DefaultStockListRepository.swift in Sources */,
 				04A25A3C29ECDC9600E00B4D /* StockEntity+ExtensionWrapper.swift in Sources */,
 				04A25A2F29EC425300E00B4D /* StockListRequest.swift in Sources */,
+				045C317429ECF41600A4DE87 /* IndustryListViewModel.swift in Sources */,
 				04A25A1D29EC2A6C00E00B4D /* NetworkRequest+Moya.swift in Sources */,
 				04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */,
 				04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */,
 				04A25A3329EC457C00E00B4D /* IndustryID.swift in Sources */,
+				045C317629ECF6A600A4DE87 /* IndustryListViewController.swift in Sources */,
 				04A25A3A29ECDC6300E00B4D /* ExtensionWrapper.swift in Sources */,
 				04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */,
 				04A25A4929ECEE9D00E00B4D /* TabBarController.swift in Sources */,

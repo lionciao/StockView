@@ -49,7 +49,13 @@ private extension TabBarController {
     }
     
     func makeStockListViewController() -> UIViewController {
-        let vc = ViewController()
+        let vm = IndustryListViewModel(
+            listRepository: viewModel.repository
+        )
+        viewModel.delegate = vm
+        let vc = IndustryListViewController(
+            viewModel: vm
+        )
         vc.tabBarItem = UITabBarItem(
             title: "產業",
             image: UIImage(named:"stock_normal"),
