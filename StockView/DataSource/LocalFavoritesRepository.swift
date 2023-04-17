@@ -33,10 +33,19 @@ extension LocalFavoritesRepository: FavoritesRepository {
     
     func addToFavorites(stock: StockModel) throws {
         try service.saveStock(stock)
+        favoritesStocks.append(
+            CompanyModel(
+                symbol: stock.symbol,
+                nickname: stock.nickname
+            )
+        )
     }
     
     func removeFromFavorites(stock: StockModel) throws {
         try service.removeStock(stock)
+        if let index = favoritesStocks.firstIndex(where: { $0.symbol == stock.symbol }) {
+            favoritesStocks.remove(at: index)
+        }
     }
     
     func doFavoritesAction(stock: StockModel) throws {
