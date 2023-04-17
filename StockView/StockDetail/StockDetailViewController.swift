@@ -12,6 +12,7 @@ final class StockDetailViewController: UIViewController {
     
     private lazy var titleLabel = makeTitleLabel()
     private lazy var seperatorView = makeSeperatorView()
+    private lazy var favoritesButton = makeFavoritesButton()
     
     private lazy var containerScrollView = makeScrollContainerView()
     private lazy var containerStackView = makeContainerStackView()
@@ -82,6 +83,14 @@ extension StockDetailViewController {
     }
 }
 
+// MARK: - Selectors
+
+private extension StockDetailViewController {
+    
+    @objc func favoritesButtonPress(_ sender: UIButton) {
+    }
+}
+
 // MARK: - View makers
 
 private extension StockDetailViewController {
@@ -91,6 +100,7 @@ private extension StockDetailViewController {
         containerScrollView.backgroundColor = .white
         titleLabel.text = viewModel.title
         navigationController?.navigationBar.isHidden = false
+        navigationItem.setRightBarButton(UIBarButtonItem(customView: favoritesButton), animated: true)
         
         [titleLabel, seperatorView, containerScrollView].forEach {
             view.addSubview($0)
@@ -220,5 +230,14 @@ private extension StockDetailViewController {
             make.height.equalTo(1)
         }
         return view
+    }
+    
+    func makeFavoritesButton() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named:"star_empty"), for: .normal)
+        button.setImage(UIImage(named: "star_filled"), for: .selected)
+        button.addTarget(self, action: #selector(favoritesButtonPress(_:)), for: .touchUpInside)
+        return button
     }
 }
