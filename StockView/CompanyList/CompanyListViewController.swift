@@ -67,9 +67,7 @@ extension CompanyListViewController: UITableViewDelegate {
         guard let stock = viewModel.stock(at: indexPath.row) else { return }
         let vm = StockDetailViewModel(
             stock: stock,
-            favoritesRepositoy: LocalFavoritesRepository(
-                service: LocalService(persistence: Persistence())
-            )
+            favoritesRepositoy: viewModel.favoritesRepositoy
         )
         let vc = StockDetailViewController(viewModel: vm)
         navigationController?.pushViewController(vc, animated: true)

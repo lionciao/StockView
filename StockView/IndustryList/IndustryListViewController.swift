@@ -76,6 +76,7 @@ extension IndustryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vm = CompanyListViewModel(
             listRepository: viewModel.listRepository,
+            favoritesRepositoy: viewModel.favoritesRepository,
             industryID: viewModel.industryID(at: indexPath.row)
         )
         let vc = CompanyListViewController(viewModel: vm)

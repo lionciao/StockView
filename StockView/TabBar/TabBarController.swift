@@ -51,7 +51,8 @@ private extension TabBarController {
     
     func makeStockListViewController() -> UIViewController {
         let vm = IndustryListViewModel(
-            listRepository: viewModel.listRepository
+            listRepository: viewModel.listRepository,
+            favoritesRepository: viewModel.favoritesRepository
         )
         viewModel.delegate = vm
         let vc = IndustryListViewController(

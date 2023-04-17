@@ -67,6 +67,7 @@ final class StockDetailViewController: UIViewController {
 extension StockDetailViewController {
 
     func config(with model: StockModel) {
+        favoritesButton.isSelected = viewModel.isFavorites()
         nameValueLabel.text = model.name
         industryValueLabel.text = model.industryID.name
         chairmanValueLabel.text  = model.chairman

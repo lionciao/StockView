@@ -13,14 +13,17 @@ final class CompanyListViewModel {
     var shouldShowEmptyView: Bool { return companyList.isEmpty }
     var title: String { industryID.name }
     
+    let favoritesRepositoy: FavoritesRepository
     private let listRepository: StockListRepository
     private let industryID: IndustryID
     
     init(
         listRepository: StockListRepository,
+        favoritesRepositoy: FavoritesRepository,
         industryID: IndustryID
     ) {
         self.listRepository = listRepository
+        self.favoritesRepositoy = favoritesRepositoy
         self.industryID = industryID
         self.companyList = listRepository.industryIDToStocksMap[industryID]?.compactMap {
             CompanyModel(

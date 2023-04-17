@@ -20,11 +20,14 @@ final class IndustryListViewModel {
     var shouldShowEmptyView: Bool { return industyList.isEmpty }
     
     let listRepository: StockListRepository
+    let favoritesRepository: FavoritesRepository
     
     init(
-        listRepository: StockListRepository
+        listRepository: StockListRepository,
+        favoritesRepository: FavoritesRepository
     ) {
         self.listRepository = listRepository
+        self.favoritesRepository = favoritesRepository
     }
     
     func industryID(at index: Int) -> IndustryID {

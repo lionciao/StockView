@@ -18,7 +18,7 @@ final class FavoritesListViewModel {
     var shouldShowEmptyView: Bool { return companyList.isEmpty }
     let title: String = "追蹤"
     
-    private let favoritesRepository: FavoritesRepository
+    let favoritesRepository: FavoritesRepository
     private let listRepository: StockListRepository
     
     init(
