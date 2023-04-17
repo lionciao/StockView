@@ -160,7 +160,7 @@ private extension StockDetailViewController {
         
         containerScrollView.addSubview(containerStackView)
         containerStackView.snp.makeConstraints { make in
-            make.leading.trailing.top.equalToSuperview()
+            make.edges.equalToSuperview()
             make.width.equalToSuperview()
         }
     }
@@ -187,6 +187,7 @@ private extension StockDetailViewController {
     func makeScrollContainerView() -> UIScrollView {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }
     
