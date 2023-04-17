@@ -33,6 +33,8 @@
 		04A25A3C29ECDC9600E00B4D /* StockEntity+ExtensionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A3B29ECDC9600E00B4D /* StockEntity+ExtensionWrapper.swift */; };
 		04A25A4129ECE7BD00E00B4D /* StockListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4029ECE7BD00E00B4D /* StockListRepository.swift */; };
 		04A25A4429ECE8BE00E00B4D /* DefaultStockListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4329ECE8BE00E00B4D /* DefaultStockListRepository.swift */; };
+		04A25A4729ECEE2E00E00B4D /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4629ECEE2E00E00B4D /* TabBarViewModel.swift */; };
+		04A25A4929ECEE9D00E00B4D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A25A4829ECEE9D00E00B4D /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		04A25A3B29ECDC9600E00B4D /* StockEntity+ExtensionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockEntity+ExtensionWrapper.swift"; sourceTree = "<group>"; };
 		04A25A4029ECE7BD00E00B4D /* StockListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListRepository.swift; sourceTree = "<group>"; };
 		04A25A4329ECE8BE00E00B4D /* DefaultStockListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStockListRepository.swift; sourceTree = "<group>"; };
+		04A25A4629ECEE2E00E00B4D /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		04A25A4829ECEE9D00E00B4D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		04A259E129EC1F4F00E00B4D /* StockView */ = {
 			isa = PBXGroup;
 			children = (
+				04A25A4529ECEE1A00E00B4D /* TabBar */,
 				04A25A4229ECE8A800E00B4D /* DataSource */,
 				04A25A2B29EC2C1900E00B4D /* Model */,
 				04A25A1B29EC2A5600E00B4D /* Network */,
@@ -213,6 +218,15 @@
 				04A25A4329ECE8BE00E00B4D /* DefaultStockListRepository.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		04A25A4529ECEE1A00E00B4D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04A25A4629ECEE2E00E00B4D /* TabBarViewModel.swift */,
+				04A25A4829ECEE9D00E00B4D /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +382,8 @@
 				04A25A3329EC457C00E00B4D /* IndustryID.swift in Sources */,
 				04A25A3A29ECDC6300E00B4D /* ExtensionWrapper.swift in Sources */,
 				04A25A2329EC2AC900E00B4D /* DefaultNetworkService.swift in Sources */,
+				04A25A4929ECEE9D00E00B4D /* TabBarController.swift in Sources */,
+				04A25A4729ECEE2E00E00B4D /* TabBarViewModel.swift in Sources */,
 				04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */,
 				04A25A2829EC2B3800E00B4D /* NetworkRequest+DefaultImplement.swift in Sources */,
 				04A25A2129EC2AA900E00B4D /* NetworkService.swift in Sources */,
