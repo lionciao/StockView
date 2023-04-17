@@ -28,6 +28,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         layoutUI()
         viewModel.fetchStockList()
+        viewModel.fetchFavoritesList()
     }
 }
 
@@ -50,7 +51,7 @@ private extension TabBarController {
     
     func makeStockListViewController() -> UIViewController {
         let vm = IndustryListViewModel(
-            listRepository: viewModel.repository
+            listRepository: viewModel.listRepository
         )
         viewModel.delegate = vm
         let vc = IndustryListViewController(
@@ -65,7 +66,14 @@ private extension TabBarController {
     }
     
     func makeFavoritesListViewController() -> UIViewController {
-        let vc = ViewController()
+        let vm = FavoritesListViewModel(
+            favoritesRepository: viewModel.favoritesRepository,
+            listRepository: viewModel.listRepository
+        )
+        viewModel.favoritesDelegate = vm
+        let vc = FavoritesListViewController(
+            viewModel: vm
+        )
         vc.tabBarItem = UITabBarItem(
             title: "追蹤",
             image: UIImage(named:"star_normal"),

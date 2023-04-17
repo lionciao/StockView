@@ -16,4 +16,8 @@ protocol FavoritesRepository {
     func removeFromFavorites(stock: StockModel) throws
     
     func doFavoritesAction(stock: StockModel) throws
+    
+    func getStockList(
+        completion: @escaping (Result<[CompanyModel], Error>) -> Void
+    )
 }

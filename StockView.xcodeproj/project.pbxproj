@@ -26,6 +26,8 @@
 		045C319F29ED7A4400A4DE87 /* LocalService+Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C319E29ED7A4400A4DE87 /* LocalService+Stock.swift */; };
 		045C31A129ED7CB000A4DE87 /* FavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C31A029ED7CB000A4DE87 /* FavoritesRepository.swift */; };
 		045C31A329ED7D1400A4DE87 /* LocalFavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C31A229ED7D1400A4DE87 /* LocalFavoritesRepository.swift */; };
+		045C31A729ED878B00A4DE87 /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C31A629ED878B00A4DE87 /* FavoritesListViewModel.swift */; };
+		045C31A929ED885900A4DE87 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C31A829ED885900A4DE87 /* FavoritesListViewController.swift */; };
 		04A259E329EC1F4F00E00B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E229EC1F4F00E00B4D /* AppDelegate.swift */; };
 		04A259E529EC1F4F00E00B4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */; };
 		04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A259E629EC1F4F00E00B4D /* ViewController.swift */; };
@@ -93,6 +95,8 @@
 		045C319E29ED7A4400A4DE87 /* LocalService+Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalService+Stock.swift"; sourceTree = "<group>"; };
 		045C31A029ED7CB000A4DE87 /* FavoritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRepository.swift; sourceTree = "<group>"; };
 		045C31A229ED7D1400A4DE87 /* LocalFavoritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFavoritesRepository.swift; sourceTree = "<group>"; };
+		045C31A629ED878B00A4DE87 /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
+		045C31A829ED885900A4DE87 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
 		04A259DF29EC1F4F00E00B4D /* StockView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A259E229EC1F4F00E00B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A259E429EC1F4F00E00B4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +214,15 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		045C31A529ED877500A4DE87 /* FavoritesList */ = {
+			isa = PBXGroup;
+			children = (
+				045C31A629ED878B00A4DE87 /* FavoritesListViewModel.swift */,
+				045C31A829ED885900A4DE87 /* FavoritesListViewController.swift */,
+			);
+			path = FavoritesList;
+			sourceTree = "<group>";
+		};
 		04A259D629EC1F4F00E00B4D = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +246,7 @@
 		04A259E129EC1F4F00E00B4D /* StockView */ = {
 			isa = PBXGroup;
 			children = (
+				045C31A529ED877500A4DE87 /* FavoritesList */,
 				045C318929ED75DC00A4DE87 /* LocalStorage */,
 				045C318429ED0B6800A4DE87 /* StockDetail */,
 				045C317F29ED06A100A4DE87 /* CompanyList */,
@@ -484,6 +498,7 @@
 			files = (
 				04A25A4129ECE7BD00E00B4D /* StockListRepository.swift in Sources */,
 				04A25A2A29EC2B5C00E00B4D /* NetworkService+share.swift in Sources */,
+				045C31A729ED878B00A4DE87 /* FavoritesListViewModel.swift in Sources */,
 				045C318129ED06BE00A4DE87 /* CompanyListViewModel.swift in Sources */,
 				04A25A2529EC2ADA00E00B4D /* ServiceError.swift in Sources */,
 				045C318329ED085800A4DE87 /* CompanyListViewController.swift in Sources */,
@@ -496,6 +511,7 @@
 				045C317429ECF41600A4DE87 /* IndustryListViewModel.swift in Sources */,
 				04A25A1D29EC2A6C00E00B4D /* NetworkRequest+Moya.swift in Sources */,
 				04A259E729EC1F4F00E00B4D /* ViewController.swift in Sources */,
+				045C31A929ED885900A4DE87 /* FavoritesListViewController.swift in Sources */,
 				045C319F29ED7A4400A4DE87 /* LocalService+Stock.swift in Sources */,
 				045C319829ED77F000A4DE87 /* ManagedObjectEncodable.swift in Sources */,
 				04A25A1F29EC2A8C00E00B4D /* NetworkCancellable.swift in Sources */,
