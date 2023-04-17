@@ -88,6 +88,20 @@ extension StockDetailViewController {
 private extension StockDetailViewController {
     
     @objc func favoritesButtonPress(_ sender: UIButton) {
+        let alertContent = viewModel.alertContent()
+        let alert = UIAlertController(
+            title: alertContent.title,
+            message: alertContent.content,
+            preferredStyle: .alert
+        )
+        let mainAction = UIAlertAction(title: alertContent.doButtonText, style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            self.viewModel.doFavoritesAction()
+        }
+        let cancelAction = UIAlertAction(title: alertContent.cancelButtonText, style: .cancel)
+        alert.addAction(mainAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
