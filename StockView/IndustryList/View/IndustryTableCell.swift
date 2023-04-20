@@ -48,12 +48,13 @@ private extension IndustryTableCell {
         titleLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(14)
-            make.trailing.equalTo(arrowImageView.snp.leading).inset(14)
         }
         
         arrowImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
+            make.leading.equalTo(titleLabel.snp.trailing).offset(14)
             make.trailing.equalToSuperview().inset(14)
+            make.width.height.equalTo(20)
         }
         
         seperatorView.snp.makeConstraints { make in
