@@ -72,6 +72,29 @@ extension FavoritesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let alertContent = viewModel.alertContent(at: indexPath.row)
+            let alert = UIAlertController(
+                title: alertContent.title,
+                message: alertContent.content,
+                preferredStyle: .alert
+            )
+            let mainAction = UIAlertAction(title: alertContent.doButtonText, style: .default) { [weak self] _ in
+                guard let self = self else { return }
+                self.viewModel.doFavoritesAction(at: indexPath.row)
+            }
+            let cancelAction = UIAlertAction(title: alertContent.cancelButtonText, style: .cancel)
+            alert.addAction(mainAction)
+            alert.addAction(cancelAction)
+            present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate

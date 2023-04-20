@@ -46,3 +46,36 @@ extension FavoritesListViewModel: TabBarViewModelFavoritesDelegate {
         delegate?.didFetchCompanyList()
     }
 }
+
+// MARK: - Favorites
+
+extension FavoritesListViewModel {
+    
+    func alertContent(at index: Int) -> AlertContent {
+        let stock = stock(at: index)!
+        return AlertContent(
+            isFavorites: isFavorites(at: index),
+            companyText: "\(stock.symbol) \(stock.nickname)"
+        )
+    }
+    
+    func doFavoritesAction(at index: Int) {
+        let stock = stock(at: index)!
+        do {
+            try favoritesRepository.doFavoritesAction(stock: stock)
+        } catch {
+            // TODO: Error handling
+            print("error: \(error)")
+        }
+    }
+}
+
+// MARK: - Helpers
+
+extension FavoritesListViewModel {
+    
+    func isFavorites(at index: Int) -> Bool {
+        let stock = stock(at: index)!
+        return favoritesRepository.isFavorites(stock: stock)
+    }
+}
